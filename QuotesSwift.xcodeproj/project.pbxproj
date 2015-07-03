@@ -10,6 +10,8 @@
 		B12E41987EE170C82F96C436 /* Pods_QuotesSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5061EBA1B93CAF1B9600770 /* Pods_QuotesSwift.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D93D3C921B46D7A20096FC39 /* AuthorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93D3C911B46D7A20096FC39 /* AuthorsViewController.swift */; };
 		D93D3C941B46DB9A0096FC39 /* SingleAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93D3C931B46DB9A0096FC39 /* SingleAuthorViewController.swift */; };
+		D93D3C961B46E6DE0096FC39 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93D3C951B46E6DE0096FC39 /* CategoriesViewController.swift */; };
+		D93D3C981B46E8150096FC39 /* SingleCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93D3C971B46E8150096FC39 /* SingleCategoryViewController.swift */; };
 		D9F989A11B46B97F003DE915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F989A01B46B97F003DE915 /* AppDelegate.swift */; };
 		D9F989A61B46B97F003DE915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F989A41B46B97F003DE915 /* Main.storyboard */; };
 		D9F989A81B46B97F003DE915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F989A71B46B97F003DE915 /* Images.xcassets */; };
@@ -35,6 +37,8 @@
 		D93D3C8E1B46D5DC0096FC39 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/Pods-QuotesSwift/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D93D3C911B46D7A20096FC39 /* AuthorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorsViewController.swift; sourceTree = "<group>"; };
 		D93D3C931B46DB9A0096FC39 /* SingleAuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleAuthorViewController.swift; sourceTree = "<group>"; };
+		D93D3C951B46E6DE0096FC39 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		D93D3C971B46E8150096FC39 /* SingleCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCategoryViewController.swift; sourceTree = "<group>"; };
 		D9F9899B1B46B97F003DE915 /* QuotesSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotesSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F9899F1B46B97F003DE915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9F989A01B46B97F003DE915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				D9F989A01B46B97F003DE915 /* AppDelegate.swift */,
 				D93D3C911B46D7A20096FC39 /* AuthorsViewController.swift */,
 				D93D3C931B46DB9A0096FC39 /* SingleAuthorViewController.swift */,
+				D93D3C951B46E6DE0096FC39 /* CategoriesViewController.swift */,
+				D93D3C971B46E8150096FC39 /* SingleCategoryViewController.swift */,
 				D9F989A41B46B97F003DE915 /* Main.storyboard */,
 				D9F989C21B46D23B003DE915 /* AlamofireSwiftyJSON.swift */,
 				D9F989A71B46B97F003DE915 /* Images.xcassets */,
@@ -299,8 +305,10 @@
 			files = (
 				D9F989C31B46D23B003DE915 /* AlamofireSwiftyJSON.swift in Sources */,
 				D9F989A11B46B97F003DE915 /* AppDelegate.swift in Sources */,
+				D93D3C981B46E8150096FC39 /* SingleCategoryViewController.swift in Sources */,
 				D93D3C941B46DB9A0096FC39 /* SingleAuthorViewController.swift in Sources */,
 				D93D3C921B46D7A20096FC39 /* AuthorsViewController.swift in Sources */,
+				D93D3C961B46E6DE0096FC39 /* CategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
