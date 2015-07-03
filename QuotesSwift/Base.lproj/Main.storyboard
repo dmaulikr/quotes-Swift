@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Authors View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="QuotesSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AuthorsViewController" customModule="QuotesSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,6 +26,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c86-Xs-SMl" id="cg6-qI-yqJ">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wjG-KP-KDG" kind="show" identifier="singleAuthorVCSegue" id="dk5-fo-5BT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -49,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="-422"/>
+            <point key="canvasLocation" x="685" y="-505"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ahl-S2-XBe">
@@ -67,7 +70,54 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8Q-kf-xav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="-422"/>
+            <point key="canvasLocation" x="25" y="-486"/>
+        </scene>
+        <!--Single Author View Controller-->
+        <scene sceneID="we3-qg-6I0">
+            <objects>
+                <viewController id="wjG-KP-KDG" customClass="SingleAuthorViewController" customModule="QuotesSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fRt-NS-DOu"/>
+                        <viewControllerLayoutGuide type="bottom" id="hDp-ri-wHN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HkP-bP-HzI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="shx-nq-9Cg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" id="7ri-Cf-Q0K">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7ri-Cf-Q0K" id="aD0-NN-PmE">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wjG-KP-KDG" id="3jP-65-Xge"/>
+                                    <outlet property="delegate" destination="wjG-KP-KDG" id="JNi-mA-EDh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="shx-nq-9Cg" secondAttribute="trailing" id="0Yl-lh-0Wn"/>
+                            <constraint firstItem="shx-nq-9Cg" firstAttribute="top" secondItem="HkP-bP-HzI" secondAttribute="top" id="OXM-fO-duY"/>
+                            <constraint firstItem="shx-nq-9Cg" firstAttribute="leading" secondItem="HkP-bP-HzI" secondAttribute="leading" id="hnh-p5-oEC"/>
+                            <constraint firstItem="hDp-ri-wHN" firstAttribute="top" secondItem="shx-nq-9Cg" secondAttribute="bottom" id="iRK-KN-k3e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="goc-3A-wqZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="shx-nq-9Cg" id="7Tc-Hc-AwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXl-oQ-6nk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1371" y="-505"/>
         </scene>
     </scenes>
 </document>

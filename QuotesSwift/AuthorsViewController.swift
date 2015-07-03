@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  AuthorsViewController.swift
 //  QuotesSwift
 //
 //  Created by Terry Bu on 7/3/15.
@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AuthorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var allAuthorsJSON: JSON?
     @IBOutlet weak var tableView: UITableView!
@@ -58,6 +58,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell!.textLabel!.text = allAuthorsJSON![indexPath.row].string
         
         return cell!
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "singleAuthorVCSegue") {
+            var destination = segue.destinationViewController as! SingleAuthorViewController
+            var selectedAuthor = allAuthorsJSON![tableView.indexPathForSelectedRow()!.row].string
+            destination.author = selectedAuthor
+        }
     }
     
     
