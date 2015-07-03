@@ -14,8 +14,10 @@ class SingleCategoryViewController: UITableViewController {
     
     var category: String?
     var categoryQuotes: JSON?
+    var alertController: UIAlertController?
     
     override func viewDidLoad() {
+
         
         if let myCategory = category {
             var urlString = "http://terrysquotes.herokuapp.com/category/\(myCategory).json"
@@ -32,6 +34,7 @@ class SingleCategoryViewController: UITableViewController {
                 })
         }
     }
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -60,9 +63,9 @@ class SingleCategoryViewController: UITableViewController {
         var quoteObject =  categoryQuotes![indexPath.row]
         var quoteText = quoteObject["quotetext"].string
         
-        var alertController = UIAlertController(title: quoteObject["author"].string, message: quoteText, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController = UIAlertController(title: quoteObject["author"].string, message: quoteText, preferredStyle: UIAlertControllerStyle.Alert)
         var action = UIAlertAction(title: "Read it", style: UIAlertActionStyle.Default, handler: nil)
-        alertController.addAction(action)
-        presentViewController(alertController, animated: false, completion: nil)
+        alertController!.addAction(action)
+        presentViewController(alertController!, animated: false, completion:nil)
     }
 }
