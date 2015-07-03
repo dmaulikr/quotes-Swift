@@ -61,5 +61,15 @@ class SingleAuthorViewController: UIViewController, UITableViewDataSource, UITab
         return cell!
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var quoteObject =  authorsQuotes![indexPath.row]
+        var quoteText = quoteObject["quotetext"].string
+        
+        var alertController = UIAlertController(title: author, message: quoteText, preferredStyle: UIAlertControllerStyle.Alert)
+        var action = UIAlertAction(title: "Read it", style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(action)
+        presentViewController(alertController, animated: false, completion: nil)
+    }
+    
     
 }
